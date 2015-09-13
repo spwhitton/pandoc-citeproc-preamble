@@ -3,11 +3,15 @@ import           Text.Pandoc.JSON
 preamble = [ RawBlock (Format "latex") "\\section*{References}"
            , Para [ RawInline (Format "tex") "\\setlength{\\parindent}{-0.2in}"
                   , Space
+                  , RawInline (Format "tex") "\\singlespacing"
+                  , Space
+                  , RawInline (Format "tex") "\\small"
+                  , Space
                   , RawInline (Format "tex") "\\setlength{\\leftskip}{0.2in}"
                   , Space
                   , RawInline (Format "tex") "\\setlength{\\parskip}{8pt}"
                   , Space
-                  , RawInline (Format "tex") "\\vspace*{-0.2in}"
+                  , RawInline (Format "tex") "\\vspace*{-0.4in}"
                   , Space
                   , RawInline (Format "tex") "\\noindent"
                   ]
