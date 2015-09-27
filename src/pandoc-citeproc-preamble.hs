@@ -1,6 +1,6 @@
 {-
 
-    pandoc-citeproc-preamble --- Insert before the additions made by pandoc-citeproc
+    pandoc-citeproc-preamble --- Insert a preamble before pandoc-citeproc's bibliography
 
     Copyright (C) 2015  Sean Whitton
 

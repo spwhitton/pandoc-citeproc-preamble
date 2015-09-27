@@ -1,6 +1,6 @@
 name:                pandoc-citeproc-preamble
 version:             1.0.0
-synopsis:            Insert before the additions made by pandoc-citeproc
+synopsis:            Insert a preamble before pandoc-citeproc's bibliography
 description:         Please see README.md
 homepage:            https://github.com/spwhitton/pandoc-citeproc-preamble
 license:             GPL-3
