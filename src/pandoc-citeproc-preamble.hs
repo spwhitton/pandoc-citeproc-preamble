@@ -27,10 +27,11 @@ findPreambleFile (Format format) meta =
         metadataPreamble@(Just _) -> return metadataPreamble
         Nothing                   -> tryDatadir
   where
-    defaultPreamble = (</> "citeproc-preamble" </> "default" <.> format)
-                      <$> getPandocDatadir
-    tryDatadir      = defaultPreamble >>= doesFileExist >>= \exists ->
-        if exists then Just <$> defaultPreamble else return Nothing
+    tryDatadir = do
+        defaultPreamble <- (</> "citeproc-preamble" </> "default" <.> format)
+                           <$> getPandocDatadir
+        doesFileExist defaultPreamble >>= \exists ->
+            return $ if exists then Just defaultPreamble else Nothing
 
 getPandocDatadir :: IO FilePath
 getPandocDatadir =
