@@ -21,7 +21,7 @@ doPreamble maybeFormat input@(Pandoc meta blocks) =
     lsBlock ls = RawBlock format ls
     format = maybe (Format "latex") id maybeFormat
 
-findPreambleFile    :: Format -> Meta -> IO (Maybe FilePath)
+findPreambleFile :: Format -> Meta -> IO (Maybe FilePath)
 findPreambleFile (Format format) meta =
     case lookupMeta "citeproc-preamble" meta >>= toPath of
         metadataPreamble@(Just _) -> return metadataPreamble
