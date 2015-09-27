@@ -79,6 +79,10 @@ regard to output format.
 
 [hanging indent]: http://www.computerhope.com/jargon/h/hanginde.htm "description of hanging indent"
 
+## Bugs
+
+Please report bugs by e-mail to `<spwhitton@spwhitton.name>`.
+
 ## License
 
 Copyright (C) 2015  Sean Whitton
