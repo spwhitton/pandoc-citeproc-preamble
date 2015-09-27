@@ -1,9 +1,9 @@
 name:                pandoc-citeproc-preamble
-version:             0.1.0
+version:             1.0.0
 synopsis:            Insert before the additions made by pandoc-citeproc
-description:         Please see README.md when I write it
+description:         Please see README.md
 homepage:            https://github.com/spwhitton/pandoc-citeproc-preamble
-license:             BSD3
+license:             GPL-3
 license-file:        LICENSE
 author:              Sean Whitton
 maintainer:          spwhitton@spwhitton.name
