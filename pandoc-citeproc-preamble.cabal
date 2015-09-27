@@ -14,7 +14,7 @@ cabal-version:       >=1.10
 executable pandoc-citeproc-preamble
   hs-source-dirs:      src
   main-is:             pandoc-citeproc-preamble.hs
-  build-depends:       base
+  build-depends:       base >= 4 && < 5
                      , pandoc-types
                      , process
                      , directory
