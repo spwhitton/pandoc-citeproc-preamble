@@ -31,7 +31,12 @@ import           Text.Pandoc.JSON
 insertPreamble :: Block -> [Block] -> [Block]
 insertPreamble preamble = foldr step []
   where
-    step refs@(Div (_, ["references"], _) _) xs = preamble : refs : xs
+    step refsDiv@(Div (_, ["references"], _) theRefs) xs =
+        -- check whether pandoc-citeproc actually inserted any
+        -- references
+        if null theRefs
+        then refsDiv : xs
+        else preamble : refsDiv : xs
     step x xs = x:xs
 
 doPreamble :: Maybe Format -> Pandoc -> IO Pandoc
