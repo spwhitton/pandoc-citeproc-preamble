@@ -85,7 +85,7 @@ Please report bugs by e-mail to `<spwhitton@spwhitton.name>`.
 
 ## License
 
-Copyright (C) 2015  Sean Whitton
+Copyright (C) 2015-2016  Sean Whitton
 
 pandoc-citeproc-preamble is free software: you can redistribute it
 and/or modify it under the terms of the GNU General Public License as
