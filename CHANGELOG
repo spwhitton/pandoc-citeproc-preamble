@@ -3,6 +3,7 @@
 # Version 1.1.0 (UNRELEASED) #
 
 * Bump LTS Haskell version to 5.4 by means of cabal.config file.
+  This should fix SoftBreak errors.
 * Don't insert a preamble if pandoc-citeproc inserted no bibliographic
   entries.
 
