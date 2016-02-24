@@ -2,7 +2,7 @@
 
 ## Synopsis
 
-`pandoc-citeproc-preamble` is a JSON filter for [Pandoc][] which
+pandoc-citeproc-preamble is a JSON filter for [Pandoc][] which
 inserts a preamble before the output that the [pandoc-citeproc][]
 filter appends to the document.  This preamble might include a heading
 (e.g. "Bibliography") and raw markup to format the bibliography for
@@ -14,20 +14,17 @@ the output format.
 
 ## Installation
 
-`pandoc-citeproc-preamble` is available from Hackage, so if you have a
-working Haskell installation on your machine you should just be able
-to run `cabal install pandoc-citeproc-preamble`.  But I recommend
-installing [stack][] and then
+pandoc-citeproc-preamble uses the standard Haskell toolchain and is
+available from Hackage, so you should just be able to `cabal install
+pandoc-citeproc-preamble`.
 
-    $ git clone https://github.com/spwhitton/pandoc-citeproc-preamble
-    $ cd pandoc-citeproc-preamble
-    $ stack install
+If you are not a Haskell programmer, you might find it easier to
 
-which will put the `pandoc-citeproc-preamble` binary in ~/.local/bin,
-which should be in your PATH environment variable if you've set stack
-up correctly.
+1. install [Stack][];
+2. ensure that `~/.local/bin` is in your shell's PATH
+3. run `stack install --resolver=lts-5.4 pandoc-citeproc-preamble`.
 
-[stack]: https://github.com/commercialhaskell/stack
+[Stack]: https://github.com/commercialhaskell/stack
 
 ## Usage
 
@@ -37,7 +34,7 @@ pandoc-citeproc`, e.g.
     $ pandoc -s --filter pandoc-citeproc --bibliography=~/doc/mine.bib --filter pandoc-citeproc-preamble ~/doc/my_essay.mdwn -o ~/my_essay.pdf
 
 In this case, since the output format is LaTeX,
-`pandoc-citeproc-preamble` will look for the preamble in the file
+pandoc-citeproc-preamble will look for the preamble in the file
 `data_dir/citeproc-preamble/default.latex` where `data_dir` is your
 Pandoc user data directory, as reported by `pandoc --version`.  You
 may specify a different preamble by setting document metadata like this:
@@ -53,7 +50,7 @@ file's YAML metadata block.
 Please see my [~/.pandoc/citeproc-preamble/default.latex][], which
 was inspired by [this guide][].
 
-[~/.pandoc/citeproc-preamble/default.latex]: https://github.com/spwhitton/dotfiles/blob/master/.pandoc/citeproc-preamble/default.latex "my default preamble"
+[~/.pandoc/citeproc-preamble/default.latex]: https://git.spwhitton.name/?p=dotfiles.git;a=blob;f=.pandoc/citeproc-preamble/default.latex;hb=HEAD "my default preamble"
 
 [this guide]: http://kieranhealy.org/blog/archives/2014/01/23/plain-text/ "Plain Text, Papers, Pandoc"
 
@@ -72,7 +69,7 @@ common customisation is to set up a [hanging indent][] for bibliography
 entries.
 
 Since pandoc-citeproc doesn't provide any facility to add formatting
-control code to its output, `pandoc-citeproc-preamble` is necessary to
+control code to its output, pandoc-citeproc-preamble is necessary to
 avoid the user being forced to add their control code to the end of
 their input files, thereby losing the input file's agnosticity with
 regard to output format.
