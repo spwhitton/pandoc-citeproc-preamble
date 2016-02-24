@@ -2,7 +2,7 @@
 
 # Version 1.1.0 (UNRELEASED) #
 
-* Bump LTS Haskell version to 5.4.
+* Bump LTS Haskell version to 5.4 by means of cabal.config file.
 * Don't insert a preamble if pandoc-citeproc inserted no bibliographic
   entries.
 
