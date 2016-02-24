@@ -1,0 +1,11 @@
+<!-- -*- mode: markdown; -*- -->
+
+# Version 1.1.0 (UNRELEASED) #
+
+* Bump LTS Haskell version to 5.4.
+* Don't insert a preamble if pandoc-citeproc inserted no bibliographic
+  entries.
+
+# Version 1.0.0 (2015-09-26)
+
+* Initial release.
