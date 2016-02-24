@@ -1,6 +1,6 @@
 <!-- -*- mode: markdown; -*- -->
 
-# Version 1.1.0 (UNRELEASED) #
+# Version 1.1.0 (2016-02-23) #
 
 * Bump LTS Haskell version to 5.4 by means of cabal.config file.
   This should fix SoftBreak errors.
