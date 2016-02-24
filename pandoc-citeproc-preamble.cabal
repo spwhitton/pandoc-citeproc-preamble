@@ -23,4 +23,4 @@ executable pandoc-citeproc-preamble
 
 source-repository head
   type:     git
-  location: https://github.com/spwhitton/pandoc-citeproc-preamble
+  location: https://git.spwhitton.name/pandoc-citeproc-preamble
