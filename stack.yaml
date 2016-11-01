@@ -1,0 +1,6 @@
+resolver: lts-7.5
+packages:
+extra-deps: 
+- pandoc-types-1.17.0.4
+flags: {}
+extra-package-dbs: []
