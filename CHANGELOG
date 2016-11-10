@@ -1,5 +1,9 @@
 <!-- -*- mode: markdown; -*- -->
 
+# Version 1.2.0 (2016-11-10) #
+
+* Bump LTS Haskell version to 7.8.
+
 # Version 1.1.0 (2016-02-23) #
 
 * Bump LTS Haskell version to 5.4 by means of cabal.config file.
