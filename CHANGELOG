@@ -1,5 +1,10 @@
 <!-- -*- mode: markdown; -*- -->
 
+# Version 1.2.1 (2016-11-10) #
+
+* Bump version in pandoc-citeproc-preamble.cabal.
+* Bump resolver in README.md.
+
 # Version 1.2.0 (2016-11-10) #
 
 * Bump LTS Haskell version to 7.8.
