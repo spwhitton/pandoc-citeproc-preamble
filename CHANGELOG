@@ -1,5 +1,14 @@
 <!-- -*- mode: markdown; -*- -->
 
+# Version 1.2.2 (2016-12-22) #
+
+* Delete LTS Haskell cabal.config.
+
+pandoc-citeproc-preamble is tested and working with pandoc 1.19 and
+pandoc-citeproc 0.10.3.  However, to use these versions, you need to
+compile pandoc-citeproc-preamble against pandoc-types 1.17.  The
+existing cabal.config was making that more difficult.
+
 # Version 1.2.1 (2016-11-10) #
 
 * Bump version in pandoc-citeproc-preamble.cabal.
