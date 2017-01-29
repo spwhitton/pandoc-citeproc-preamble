@@ -1,0 +1,22 @@
+#!/usr/bin/make -f
+
+# these rules originally written by Joey Hess for hothasktags package
+
+%:
+	dh $@
+
+override_dh_auto_configure:
+	ghc --make Setup
+	./Setup configure
+
+override_dh_auto_build:
+	./Setup build
+
+override_dh_auto_clean:
+	if [ -x Setup ]; then ./Setup clean; fi
+	rm -f Setup Setup.o Setup.hi
+
+override_dh_strip:
+	# GHC cannot produce debugging symbols so the -dbgsym package
+	# ends up empty, so disable generating it
+	dh_strip --no-automatic-dbgsym
