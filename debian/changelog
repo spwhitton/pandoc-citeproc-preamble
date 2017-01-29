@@ -1,0 +1,44 @@
+pandoc-citeproc-preamble (1.2.3) UNRELEASED; urgency=medium
+
+  * Convert changelog to Debian's format.
+
+ -- Sean Whitton <spwhitton@spwhitton.name>  Sun, 29 Jan 2017 11:00:07 -0700
+
+pandoc-citeproc-preamble (1.2.2) unstable; urgency=medium
+
+  * Delete LTS Haskell cabal.config.
+
+    pandoc-citeproc-preamble is tested and working with pandoc 1.19 and
+    pandoc-citeproc 0.10.3.  However, to use these versions, you need to
+    compile pandoc-citeproc-preamble against pandoc-types 1.17.  The
+    existing cabal.config was making that more difficult.
+
+ -- Sean Whitton <spwhitton@spwhitton.name>  Thu, 22 Dec 2016 13:54:00 +0000
+
+pandoc-citeproc-preamble (1.2.1) unstable; urgency=medium
+
+  * Bump version in pandoc-citeproc-preamble.cabal.
+  * Bump resolver in README.md.
+
+ -- Sean Whitton <spwhitton@spwhitton.name>  Thu, 10 Nov 2016 09:48:40 -0700
+
+pandoc-citeproc-preamble (1.2.0) unstable; urgency=medium
+
+  * Bump LTS Haskell version to 7.8.
+
+ -- Sean Whitton <spwhitton@spwhitton.name>  Thu, 10 Nov 2016 09:45:19 -0700
+
+pandoc-citeproc-preamble (1.1.0) unstable; urgency=medium
+
+  * Bump LTS Haskell version to 5.4 by means of cabal.config file.
+    This should fix SoftBreak errors.
+  * Don't insert a preamble if pandoc-citeproc inserted no bibliographic
+    entries.
+
+ -- Sean Whitton <spwhitton@spwhitton.name>  Tue, 23 Feb 2016 20:50:34 -0700
+
+pandoc-citeproc-preamble (1.0.0) unstable; urgency=medium
+
+  * Initial release.
+
+ -- Sean Whitton <spwhitton@spwhitton.name>  Sat, 26 Sep 2015 22:18:00 -0700

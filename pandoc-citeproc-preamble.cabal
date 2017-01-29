@@ -1,5 +1,5 @@
 name:                pandoc-citeproc-preamble
-version:             1.2.2
+version:             1.2.3
 synopsis:            Insert a preamble before pandoc-citeproc's bibliography
 description:         Please see README.md
 homepage:            https://github.com/spwhitton/pandoc-citeproc-preamble
