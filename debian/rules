@@ -11,10 +11,12 @@ override_dh_auto_configure:
 
 override_dh_auto_build:
 	./Setup build
+	pod2man --center="User Commands" --section=1 \
+		pandoc-citeproc-preamble.1.pod > pandoc-citeproc-preamble.1
 
 override_dh_auto_clean:
 	if [ -x Setup ]; then ./Setup clean; fi
-	rm -f Setup Setup.o Setup.hi
+	rm -f Setup Setup.o Setup.hi pandoc-citeproc-preamble.1
 
 override_dh_strip:
 	# GHC cannot produce debugging symbols so the -dbgsym package
