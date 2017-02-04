@@ -1,11 +1,11 @@
-pandoc-citeproc-preamble (1.2.3) UNRELEASED; urgency=medium
+pandoc-citeproc-preamble (1.2.3) unstable; urgency=medium
 
   * Convert changelog to Debian's format.
   * First upload to Debian: add debian/ subdirectory.
   * Add examples/ directory.
   * Add manpage (only installed by Debian package at present).
 
- -- Sean Whitton <spwhitton@spwhitton.name>  Sun, 29 Jan 2017 11:00:07 -0700
+ -- Sean Whitton <spwhitton@spwhitton.name>  Sat, 04 Feb 2017 13:27:54 -0700
 
 pandoc-citeproc-preamble (1.2.2) unstable; urgency=medium
 
