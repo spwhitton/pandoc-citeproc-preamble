@@ -1,4 +1,0 @@
-# standard override for Haskell binary packages
-binary-or-shlib-defines-rpath
-# standard override for Haskell binary packages
-hardening-no-relro
