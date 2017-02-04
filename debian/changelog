@@ -2,6 +2,7 @@ pandoc-citeproc-preamble (1.2.3) UNRELEASED; urgency=medium
 
   * Convert changelog to Debian's format.
   * First upload to Debian: add debian/ subdirectory.
+  * New examples/ directory.
 
  -- Sean Whitton <spwhitton@spwhitton.name>  Sun, 29 Jan 2017 11:00:07 -0700
 
