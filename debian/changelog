@@ -6,6 +6,7 @@ pandoc-citeproc-preamble (1.2.3-1) UNRELEASED; urgency=medium
     when new versions of pandoc-types hit Debian unstable.
     - Build-depend on haskell-devscripts-minimal | haskell-devscripts.
   * Switch to source format 3.0 (quilt).
+  * Priority extra->optional.
 
  -- Sean Whitton <spwhitton@spwhitton.name>  Fri, 15 Feb 2019 20:16:14 -0700
 

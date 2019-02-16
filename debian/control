@@ -1,6 +1,6 @@
 Source: pandoc-citeproc-preamble
 Maintainer: Sean Whitton <spwhitton@spwhitton.name>
-Priority: extra
+Priority: optional
 Section: haskell
 Build-Depends: debhelper (>= 10),
  ghc,
