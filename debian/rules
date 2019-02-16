@@ -14,6 +14,11 @@ override_dh_auto_build:
 	pod2man --center="User Commands" --section=1 \
 		pandoc-citeproc-preamble.1.pod > pandoc-citeproc-preamble.1
 
+override_dh_gencontrol:
+	echo "haskell:Depends=$(shell . /usr/share/haskell-devscripts/Dh_Haskell.sh; hashed_dependency ghc dev pandoc-types)" \
+		>>debian/pandoc-citeproc-preamble.substvars
+	dh_gencontrol
+
 override_dh_auto_clean:
 	if [ -x Setup ]; then ./Setup clean; fi
 	rm -f Setup Setup.o Setup.hi pandoc-citeproc-preamble.1

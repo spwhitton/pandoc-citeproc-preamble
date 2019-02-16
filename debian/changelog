@@ -1,5 +1,10 @@
 pandoc-citeproc-preamble (1.2.3-1) UNRELEASED; urgency=medium
 
+  * Add override_dh_gencontrol stanza to generate a versioned dependency
+    on libghc-pandoc-types-dev using haskell-devscripts (Closes: #920743).
+    This should enable automatically binNMUing pandoc-citeproc-preamble
+    when new versions of pandoc-types hit Debian unstable.
+    - Build-depend on haskell-devscripts-minimal | haskell-devscripts.
   * Switch to source format 3.0 (quilt).
 
  -- Sean Whitton <spwhitton@spwhitton.name>  Fri, 15 Feb 2019 20:16:14 -0700

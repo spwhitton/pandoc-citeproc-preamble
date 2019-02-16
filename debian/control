@@ -4,6 +4,7 @@ Priority: extra
 Section: haskell
 Build-Depends: debhelper (>= 10),
  ghc,
+ haskell-devscripts-minimal | haskell-devscripts (>= 0.8),
  libghc-pandoc-types-dev,
 Standards-Version: 3.9.8
 Homepage: https://spwhitton.name/tech/code/pandoc-citeproc-preamble/
@@ -14,6 +15,7 @@ Package: pandoc-citeproc-preamble
 Architecture: any
 Depends: ${shlibs:Depends},
  ${misc:Depends},
+ ${haskell:Depends},
 Recommends: pandoc-citeproc
 Description: insert a preamble before pandoc-citeproc's bibliography
  pandoc-citeproc-preamble is a JSON filter for Pandoc which inserts a
