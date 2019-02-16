@@ -1,4 +1,4 @@
-pandoc-citeproc-preamble (1.2.3-1) UNRELEASED; urgency=medium
+pandoc-citeproc-preamble (1.2.3-1) experimental; urgency=medium
 
   * Add override_dh_gencontrol stanza to generate a versioned dependency
     on libghc-pandoc-types-dev using haskell-devscripts (Closes: #920743).
@@ -8,7 +8,7 @@ pandoc-citeproc-preamble (1.2.3-1) UNRELEASED; urgency=medium
   * Switch to source format 3.0 (quilt).
   * Priority extra->optional.
 
- -- Sean Whitton <spwhitton@spwhitton.name>  Fri, 15 Feb 2019 20:16:14 -0700
+ -- Sean Whitton <spwhitton@spwhitton.name>  Fri, 15 Feb 2019 20:26:37 -0700
 
 pandoc-citeproc-preamble (1.2.3) unstable; urgency=medium
 
