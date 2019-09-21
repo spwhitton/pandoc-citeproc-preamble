@@ -1,3 +1,9 @@
+pandoc-citeproc-preamble (1.2.4-2) unstable; urgency=medium
+
+  * Upload to unstable.
+
+ -- Sean Whitton <spwhitton@spwhitton.name>  Fri, 20 Sep 2019 21:12:27 -0700
+
 pandoc-citeproc-preamble (1.2.4-1) experimental; urgency=medium
 
   * New upstream release.
