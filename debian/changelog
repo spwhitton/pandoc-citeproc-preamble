@@ -1,6 +1,10 @@
 pandoc-citeproc-preamble (1.2.5-1) UNRELEASED; urgency=medium
 
   * Add a simple integration test.
+  * README.md: Don't specify a --resolver argument in the sample `stack
+    install` command.
+    Users probably want to use the latest LTS, so that
+    pandoc-citeproc-preamble will work with recent pandoc.
 
  -- Sean Whitton <spwhitton@spwhitton.name>  Thu, 28 Nov 2019 13:37:21 -0700
 

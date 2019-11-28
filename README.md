@@ -22,7 +22,7 @@ If you are not a Haskell programmer, you might find it easier to
 
 1. install [Stack][];
 2. ensure that `~/.local/bin` is in your shell's PATH
-3. run `stack install --resolver=lts-7.8 pandoc-citeproc-preamble`.
+3. run `stack install pandoc-citeproc-preamble`.
 
 [Stack]: https://github.com/commercialhaskell/stack
 
