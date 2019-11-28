@@ -34,7 +34,7 @@ print "testing with ".(`pandoc --version`)[0];
 system "pandoc -s --filter pandoc-citeproc --bibliography=test.bib".
   " --filter pandoc-citeproc-preamble".
   " -M citeproc-preamble=../examples/default.latex".
-  " test.mdwn -o $output";
+  " test.mdwn -f markdown -o $output";
 
 # simple finite state machine to check that the preamble was inserted
 # in the right place
