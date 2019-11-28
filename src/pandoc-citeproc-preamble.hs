@@ -21,11 +21,13 @@
     <http://www.gnu.org/licenses/>.
 
 -}
+{-# LANGUAGE OverloadedStrings #-}
 
-import           Data.List        (isPrefixOf)
-import           System.Directory (doesFileExist)
-import           System.FilePath  ((<.>), (</>))
-import           System.Process   (readProcess)
+import           Data.List             (isPrefixOf)
+import           Data.Text.Conversions (convertText)
+import           System.Directory      (doesFileExist)
+import           System.FilePath       ((<.>), (</>))
+import           System.Process        (readProcess)
 import           Text.Pandoc.JSON
 
 insertPreamble :: Block -> [Block] -> [Block]
@@ -45,7 +47,8 @@ doPreamble maybeFormat input@(Pandoc meta blocks) =
     >>= maybe (return input)
     (\file -> do
           ls <- readFile file
-          return $ Pandoc meta (insertPreamble (lsBlock ls) blocks))
+          return $
+              Pandoc meta (insertPreamble (lsBlock $ convertText ls) blocks))
   where
     lsBlock ls = RawBlock format ls
     format = maybe (Format "latex") id maybeFormat
@@ -57,7 +60,8 @@ findPreambleFile (Format format) meta =
         Nothing                   -> tryDatadir
   where
     tryDatadir = do
-        defaultPreamble <- (</> "citeproc-preamble" </> "default" <.> format)
+        defaultPreamble <- (</> "citeproc-preamble" </> "default" <.>
+                             convertText format)
                            <$> getPandocDatadir
         doesFileExist defaultPreamble >>= \exists ->
             return $ if exists then Just defaultPreamble else Nothing
@@ -70,7 +74,7 @@ getPandocDatadir =
     prefix = "Default user data directory: "
 
 toPath                :: MetaValue -> Maybe String
-toPath (MetaString s) = Just s
+toPath (MetaString s) = Just $ convertText s
 toPath _              = Nothing
 
 main :: IO ()

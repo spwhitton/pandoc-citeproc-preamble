@@ -7,6 +7,7 @@ pandoc-citeproc-preamble (1.2.5-1) UNRELEASED; urgency=medium
     From that release, pandoc-citeproc can add a 'hanging-indent' class to
     the refs Div, which broke pandoc-citeproc-preamble's selecting the
     refs Div.
+  * Update for pandoc-types >=1.20.
   * Add a simple integration test.
   * README.md: Don't specify a --resolver argument in the sample `stack
     install` command.
