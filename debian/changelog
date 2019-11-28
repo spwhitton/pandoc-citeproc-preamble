@@ -1,3 +1,9 @@
+pandoc-citeproc-preamble (1.2.5-1) UNRELEASED; urgency=medium
+
+  * Add a simple integration test.
+
+ -- Sean Whitton <spwhitton@spwhitton.name>  Thu, 28 Nov 2019 13:37:21 -0700
+
 pandoc-citeproc-preamble (1.2.4-2) unstable; urgency=medium
 
   * Upload to unstable.

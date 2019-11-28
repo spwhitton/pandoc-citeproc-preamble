@@ -1,0 +1,3 @@
+# My document
+
+With some text, [@reference, p. 200].

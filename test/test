@@ -1,0 +1,63 @@
+#!/usr/bin/perl
+
+# Copyright (C) 2019 Sean Whitton
+#
+# This file is part of pandoc-citeproc-preamble.
+#
+# pandoc-citeproc-preamble is free software: you can redistribute it
+# and/or modify it under the terms of the GNU General Public License as
+# published by the Free Software Foundation, either version 3 of the
+# License, or (at your option) any later version.
+#
+# pandoc-citeproc-preamble is distributed in the hope that it will
+# be useful, but WITHOUT ANY WARRANTY; without even the implied warranty
+# of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+# General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with pandoc-citeproc-preamble.  If not, see
+# <http://www.gnu.org/licenses/>.
+
+use 5.028;
+use strict;
+use warnings;
+
+use File::Spec::Functions qw(rel2abs);
+use File::Basename qw(dirname);
+
+our $output = "output.tex";
+
+chdir(dirname(rel2abs(__FILE__)));
+unlink $output if -e $output;
+
+print "testing with ".(`pandoc --version`)[0];
+system "pandoc -s --filter pandoc-citeproc --bibliography=test.bib".
+  " --filter pandoc-citeproc-preamble".
+  " -M citeproc-preamble=../examples/default.latex".
+  " test.mdwn -o $output";
+
+# simple finite state machine to check that the preamble was inserted
+# in the right place
+open my $fh, '<', $output;
+my $preamble = 0;
+while (<$fh>) {
+    if ($_ eq "\\section*{References}\n") {
+        if ($preamble) {
+            die "preamble inserted twice!\n";
+        } else {
+            $preamble = 1;
+        }
+    } elsif (/A Book/) {
+        if ($preamble) {
+            say "success: citeproc preamble inserted as expected";
+            exit 0;
+        } else {
+            die "references inserted before/without preamble!\n";
+        }
+    }
+}
+if ($preamble) {
+    die "preamble without references!\n";
+} else {
+    die "neither preamble nor references found!\n";
+}
