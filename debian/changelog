@@ -1,4 +1,4 @@
-pandoc-citeproc-preamble (1.2.5-1) UNRELEASED; urgency=medium
+pandoc-citeproc-preamble (1.3-1) UNRELEASED; urgency=medium
 
   * Select pandoc-citeproc's refs Div by its 'refs' identifier, rather
     than by its 'references' class (see definition of Attr type in
