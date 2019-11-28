@@ -1,5 +1,12 @@
 pandoc-citeproc-preamble (1.2.5-1) UNRELEASED; urgency=medium
 
+  * Select pandoc-citeproc's refs Div by its 'refs' identifier, rather
+    than by its 'references' class (see definition of Attr type in
+    Text.Pandoc.Definition).
+    This fixes pandoc-citeproc-preamble with pandoc-citeproc >=0.16.3.
+    From that release, pandoc-citeproc can add a 'hanging-indent' class to
+    the refs Div, which broke pandoc-citeproc-preamble's selecting the
+    refs Div.
   * Add a simple integration test.
   * README.md: Don't specify a --resolver argument in the sample `stack
     install` command.

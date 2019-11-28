@@ -2,7 +2,7 @@
 
     pandoc-citeproc-preamble --- Insert a preamble before pandoc-citeproc's bibliography
 
-    Copyright (C) 2015-2016  Sean Whitton
+    Copyright (C) 2015-2016, 2019  Sean Whitton
 
     This file is part of pandoc-citeproc-preamble.
 
@@ -31,7 +31,7 @@ import           Text.Pandoc.JSON
 insertPreamble :: Block -> [Block] -> [Block]
 insertPreamble preamble = foldr step []
   where
-    step refsDiv@(Div (_, ["references"], _) theRefs) xs =
+    step refsDiv@(Div ("refs", _, _) theRefs) xs =
         -- check whether pandoc-citeproc actually inserted any
         -- references
         if null theRefs
