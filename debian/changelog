@@ -6,6 +6,8 @@ pandoc-citeproc-preamble (1.4) UNRELEASED; urgency=medium
   * Add debian/tests/control.
   * Add override_dh_auto_test to run the integration test.
     - Add <!nocheck> build-deps on pandoc & pandoc-citeproc.
+  * Declare compliance with Debian Policy 4.4.1.
+    - Use 'https' in the Format: field in d/copyright.
 
  -- Sean Whitton <spwhitton@spwhitton.name>  Fri, 29 Nov 2019 14:26:39 -0700
 

@@ -9,7 +9,7 @@ Build-Depends: debhelper (>= 10),
  libghc-pandoc-types-dev (>= 1.20),
  pandoc <!nocheck>,
  pandoc-citeproc <!nocheck>,
-Standards-Version: 3.9.8
+Standards-Version: 4.4.1
 Homepage: https://spwhitton.name/tech/code/pandoc-citeproc-preamble/
 Vcs-Git: https://git.spwhitton.name/pandoc-citeproc-preamble
 Vcs-Browser: https://git.spwhitton.name/pandoc-citeproc-preamble
