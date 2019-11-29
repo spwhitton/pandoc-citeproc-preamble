@@ -4,6 +4,8 @@ pandoc-citeproc-preamble (1.4) UNRELEASED; urgency=medium
   * Add CONTRIBUTING.rst & DEVELOPER-CERTIFICATE.
   * Tweak GitHub pull request template.
   * Add debian/tests/control.
+  * Add override_dh_auto_test to run the integration test.
+    - Add <!nocheck> build-deps on pandoc & pandoc-citeproc.
 
  -- Sean Whitton <spwhitton@spwhitton.name>  Fri, 29 Nov 2019 14:26:39 -0700
 
