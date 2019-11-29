@@ -27,3 +27,6 @@ override_dh_strip:
 	# GHC cannot produce debugging symbols so the -dbgsym package
 	# ends up empty, so disable generating it
 	dh_strip --no-automatic-dbgsym
+
+override_dh_auto_test:
+	test/test
