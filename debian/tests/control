@@ -1,0 +1,5 @@
+Tests: simple-integration-test
+Restrictions: rw-build-tree
+# ^ produces test/output.tex
+Test-Command: test/test
+Depends: @, pandoc, pandoc-citeproc
