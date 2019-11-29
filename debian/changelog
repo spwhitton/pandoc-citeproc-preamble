@@ -1,4 +1,4 @@
-pandoc-citeproc-preamble (1.3-1) UNRELEASED; urgency=medium
+pandoc-citeproc-preamble (1.3) unstable; urgency=medium
 
   * Select pandoc-citeproc's refs Div by its 'refs' identifier, rather
     than by its 'references' class (see definition of Attr type in
@@ -16,7 +16,7 @@ pandoc-citeproc-preamble (1.3-1) UNRELEASED; urgency=medium
     Users probably want to use the latest LTS, so that
     pandoc-citeproc-preamble will work with recent pandoc.
 
- -- Sean Whitton <spwhitton@spwhitton.name>  Thu, 28 Nov 2019 13:37:21 -0700
+ -- Sean Whitton <spwhitton@spwhitton.name>  Thu, 28 Nov 2019 21:35:50 -0700
 
 pandoc-citeproc-preamble (1.2.4-2) unstable; urgency=medium
 
