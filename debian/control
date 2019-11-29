@@ -5,7 +5,8 @@ Section: haskell
 Build-Depends: debhelper (>= 10),
  ghc,
  haskell-devscripts-minimal | haskell-devscripts (>= 0.8),
- libghc-pandoc-types-dev,
+ libghc-text-conversions-dev,
+ libghc-pandoc-types-dev (>= 1.20),
 Standards-Version: 3.9.8
 Homepage: https://spwhitton.name/tech/code/pandoc-citeproc-preamble/
 Vcs-Git: https://git.spwhitton.name/pandoc-citeproc-preamble
