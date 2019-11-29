@@ -1,6 +1,8 @@
 pandoc-citeproc-preamble (1.4) UNRELEASED; urgency=medium
 
   * Update copyright years in various places.
+  * Add CONTRIBUTING.rst & DEVELOPER-CERTIFICATE.
+  * Tweak GitHub pull request template.
 
  -- Sean Whitton <spwhitton@spwhitton.name>  Fri, 29 Nov 2019 14:26:39 -0700
 

@@ -10,4 +10,4 @@ Instead, either
   using git-request-pull(1)
 
 - prepare patches with git-format-patch(1), and send them to
-  <spwhitton@spwhitton.name>, possibly using git-send-email(1)
+  <spwhitton@spwhitton.name>, probably using git-send-email(1)
