@@ -26,14 +26,15 @@ use File::Spec::Functions qw(rel2abs);
 use File::Basename qw(dirname);
 
 our $output = "output.tex";
+our $pcp = "../dist/build/pandoc-citeproc-preamble/pandoc-citeproc-preamble";
 
 chdir(dirname(rel2abs(__FILE__)));
+die "need to build before testing\n" unless -e $pcp;
 unlink $output if -e $output;
 
 print "testing with " . (`pandoc --version`)[0];
 system "pandoc -s --filter pandoc-citeproc --bibliography=test.bib"
-  . " --filter pandoc-citeproc-preamble"
-  . " -M citeproc-preamble=../examples/default.latex"
+  . " --filter $pcp -M citeproc-preamble=../examples/default.latex"
   . " test.mdwn -f markdown -o $output";
 
 # simple finite state machine to check that the preamble was inserted
