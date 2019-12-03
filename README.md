@@ -14,9 +14,14 @@ the output format.
 
 ## Installation
 
-pandoc-citeproc-preamble uses the standard Haskell toolchain and is
-available from Hackage, so you should just be able to `cabal install
+Users of Debian 10 or later or Ubuntu 17.04 or later: `apt-get install
+pandoc-citeproc-preamble`.  Users of Debian 9: enable
+[backports][backports], and then `apt-get install -t stretch-backports
 pandoc-citeproc-preamble`.
+
+Otherwise, pandoc-citeproc-preamble uses the standard Haskell
+toolchain and is available from Hackage, so you should just be able to
+`cabal install pandoc-citeproc-preamble`.
 
 If you are not a Haskell programmer, you might find it easier to
 
@@ -24,6 +29,7 @@ If you are not a Haskell programmer, you might find it easier to
 2. ensure that `~/.local/bin` is in your shell's PATH
 3. run `stack install pandoc-citeproc-preamble`.
 
+[backports]: https://backports.debian.org/Instructions/
 [Stack]: https://github.com/commercialhaskell/stack
 
 ## Usage
