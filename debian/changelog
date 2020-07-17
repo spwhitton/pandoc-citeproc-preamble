@@ -1,3 +1,9 @@
+pandoc-citeproc-preamble (1.5) unstable; urgency=medium
+
+  * Release with correct version in pandoc-citeproc-preamble.cabal.
+
+ -- Sean Whitton <spwhitton@spwhitton.name>  Thu, 16 Jul 2020 19:46:12 -0700
+
 pandoc-citeproc-preamble (1.4-1) unstable; urgency=medium
 
   * New upstream release (Closes: #964837).
