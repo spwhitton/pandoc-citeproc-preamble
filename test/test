@@ -26,7 +26,9 @@ use File::Basename qw(dirname);
 use File::Spec::Functions qw(rel2abs);
 
 our $output = "output.tex";
-our $pcp = "../dist/build/pandoc-citeproc-preamble/pandoc-citeproc-preamble";
+our $pcp = $ENV{AUTOPKGTEST_TMP}
+  ? "/usr/bin/pandoc-citeproc-preamble"
+  : "../dist/build/pandoc-citeproc-preamble/pandoc-citeproc-preamble";
 
 chdir(dirname(rel2abs(__FILE__)));
 die "need to build before testing\n" unless -e $pcp;

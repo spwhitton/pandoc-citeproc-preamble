@@ -1,6 +1,8 @@
-pandoc-citeproc-preamble (1.5-2) UNRELEASED; urgency=medium
+pandoc-citeproc-preamble (1.6-1) UNRELEASED; urgency=medium
 
   * Drop mistaken Tests: field from d/tests/control.
+  * Fix test/test to use /usr/bin/pandoc-citeproc-preamble when
+    AUTOPKGTEST_TMP is set.
 
  -- Sean Whitton <spwhitton@spwhitton.name>  Sun, 26 Jul 2020 14:41:21 -0700
 
