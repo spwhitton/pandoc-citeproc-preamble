@@ -31,7 +31,7 @@ our $pcp = $ENV{AUTOPKGTEST_TMP}
   : "../dist/build/pandoc-citeproc-preamble/pandoc-citeproc-preamble";
 
 chdir(dirname(rel2abs(__FILE__)));
-die "need to build before testing\n" unless -e $pcp;
+die "need to build before testing\n" unless -x $pcp;
 unlink $output if -e $output;
 
 print "testing with " . (`pandoc --version`)[0];
