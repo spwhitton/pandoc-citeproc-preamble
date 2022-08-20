@@ -35,7 +35,7 @@ die "need to build before testing\n" unless -x $pcp;
 unlink $output if -e $output;
 
 print "testing with " . (`pandoc --version`)[0];
-system "pandoc -s --filter pandoc-citeproc --bibliography=test.bib"
+system "pandoc -s --citeproc --bibliography=test.bib"
   . " --filter $pcp -M citeproc-preamble=../examples/default.latex"
   . " test.mdwn -f markdown -o $output";
 

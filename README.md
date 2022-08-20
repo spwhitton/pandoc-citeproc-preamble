@@ -2,15 +2,12 @@
 
 ## Synopsis
 
-pandoc-citeproc-preamble is a JSON filter for [Pandoc][] which
-inserts a preamble before the output that the [pandoc-citeproc][]
-filter appends to the document.  This preamble might include a heading
-(e.g. "Bibliography") and raw markup to format the bibliography for
-the output format.
+pandoc-citeproc-preamble is a JSON filter for [Pandoc][] which inserts a
+preamble before the output that Pandoc's citeproc filter appends to the
+document.  This preamble might include a heading (e.g. "Bibliography") and raw
+markup to format the bibliography for the output format.
 
 [Pandoc]: http://pandoc.org/ "Pandoc home page"
-
-[pandoc-citeproc]: http://hackage.haskell.org/package/pandoc-citeproc
 
 ## Installation
 
@@ -34,10 +31,9 @@ If you are not a Haskell programmer, you might find it easier to
 
 ## Usage
 
-Add `--filter pandoc-citeproc-preamble` somewhere after `--filter
-pandoc-citeproc`, e.g.
+Add `--filter pandoc-citeproc-preamble` somewhere after `--citeproc`, e.g.
 
-    $ pandoc -s --filter pandoc-citeproc --bibliography=~/doc/mine.bib --filter pandoc-citeproc-preamble ~/doc/my_essay.mdwn -o ~/my_essay.pdf
+    $ pandoc -s --citeproc --bibliography=~/doc/mine.bib --filter pandoc-citeproc-preamble ~/doc/my_essay.mdwn -o ~/my_essay.pdf
 
 In this case, since the output format is LaTeX,
 pandoc-citeproc-preamble will look for the preamble in the file
@@ -67,18 +63,16 @@ agnostic with regard to the output format they will eventually be
 compiled to: it should not be necessary to include in one's input
 file, for example, LaTeX code to format the bibliography.
 
-When compiling to PDF (which is probably the most common case for
-users of pandoc-citeproc), formatting code is usually required to have
-the entries of pandoc-citeproc's bibliography line up with each other;
-by default, all entries except the first will be indented.  Another
-common customisation is to set up a [hanging indent][] for bibliography
-entries.
+When compiling to PDF (which is probably the most common case for users of
+Pandoc's citeproc filter), formatting code is usually required to have the
+entries of Pandoc's bibliography line up with each other; by default, all
+entries except the first will be indented.  Another common customisation is to
+set up a [hanging indent][] for bibliography entries.
 
-Since pandoc-citeproc doesn't provide any facility to add formatting
-control code to its output, pandoc-citeproc-preamble is necessary to
-avoid the user being forced to add their control code to the end of
-their input files, thereby losing the input file's agnosticity with
-regard to output format.
+Since Pandoc's citeproc filter doesn't provide any facility to add formatting
+control code to its output, pandoc-citeproc-preamble is necessary to avoid the
+user being forced to add their control code to the end of their input files,
+thereby losing the input file's agnosticity with regard to output format.
 
 [hanging indent]: http://www.computerhope.com/jargon/h/hanginde.htm "description of hanging indent"
 

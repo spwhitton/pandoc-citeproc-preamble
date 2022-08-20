@@ -1,6 +1,6 @@
 {-
 
-    pandoc-citeproc-preamble --- Insert a preamble before pandoc-citeproc's bibliography
+    pandoc-citeproc-preamble --- Insert a preamble before Pandoc's bibliography
 
     Copyright (C) 2015-2016, 2019  Sean Whitton
 
@@ -34,8 +34,7 @@ insertPreamble :: Block -> [Block] -> [Block]
 insertPreamble preamble = foldr step []
   where
     step refsDiv@(Div ("refs", _, _) theRefs) xs =
-        -- check whether pandoc-citeproc actually inserted any
-        -- references
+        -- check whether Pandoc actually inserted any references
         if null theRefs
         then refsDiv : xs
         else preamble : refsDiv : xs

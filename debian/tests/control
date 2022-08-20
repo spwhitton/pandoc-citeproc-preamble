@@ -1,4 +1,4 @@
 Test-Command: test/test
 Restrictions: rw-build-tree
 # ^ produces test/output.tex
-Depends: @, pandoc, pandoc-citeproc
+Depends: @, pandoc

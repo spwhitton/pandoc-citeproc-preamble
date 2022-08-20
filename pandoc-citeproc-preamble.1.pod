@@ -1,6 +1,6 @@
 =head1 NAME
 
-pandoc-citeproc-preamble - insert a preamble before pandoc-citeproc's bibliography
+pandoc-citeproc-preamble - insert a preamble before Pandoc's bibliography
 
 =head1 SYNOPSIS
 
@@ -8,20 +8,18 @@ B<pandoc-citeproc-preamble>
 
 =head1 DESCRIPTION
 
-B<pandoc-citeproc-preamble> is a JSON filter for pandoc(1) which
-inserts a preamble before the output that the pandoc-citeproc(1)
-filter appends to the document.  This preamble might include a heading
-(e.g. "Bibliography") and/or raw markup to format the bibliography for
-the output format.
+B<pandoc-citeproc-preamble> is a JSON filter for pandoc(1) which inserts a
+preamble before the output that Pandoc's citeproc filter appends to the
+document.  This preamble might include a heading (e.g. "Bibliography") and/or
+raw markup to format the bibliography for the output format.
 
 =head1 USAGE
 
-Add B<--filter pandoc-citeproc-preamble> somewhere after B<--filter
-pandoc-citeproc>, e.g.
+Add B<--filter pandoc-citeproc-preamble> somewhere after B<--citeproc>, e.g.
 
 =over 4
 
-    % pandoc -s --filter pandoc-citeproc --bibliography=~/doc/mine.bib \
+    % pandoc -s --citeproc --bibliography=~/doc/mine.bib \
         --filter pandoc-citeproc-preamble \
         ~/doc/my_essay.mdwn -o ~/my_essay.pdf
 
@@ -55,13 +53,12 @@ eventually be compiled.  For example, it should not be necessary to
 include LaTeX code in one's input file in order to format the
 bibliography.  The input file might also be compiled to HTML.
 
-However, when compiling to PDF, formatting code is usually required in
-order to have the entries of pandoc-citeproc's bibliography line up
-with each other; by default, all entries except the first will be
-indented.  Another common customisation is to set up a hanging indent
-for bibliography entries.
+However, when compiling to PDF, formatting code is usually required in order
+to have the entries of Pandoc's bibliography line up with each other; by
+default, all entries except the first will be indented.  Another common
+customisation is to set up a hanging indent for bibliography entries.
 
-Since pandoc-citeproc(1) doesn't provide any facility to add
+Since Pandoc's citeproc filter doesn't provide any facility to add
 formatting control code to its output, B<pandoc-citeproc-preamble> is
 necessary to avoid the user being forced to add their control code to
 the end of their input files, thereby losing the input file's
@@ -73,4 +70,4 @@ Sean Whitton <spwhitton@spwhitton.name>
 
 =head1 SEE ALSO
 
-pandoc(1), pandoc-citeproc(1)
+pandoc(1)

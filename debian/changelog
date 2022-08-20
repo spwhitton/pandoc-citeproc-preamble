@@ -1,3 +1,12 @@
+pandoc-citeproc-preamble (1.7-1) UNRELEASED; urgency=medium
+
+  * Replace references to pandoc-citeproc.
+    We now say "Pandoc's citeproc filter", "Pandoc's bibliography", etc..
+  * Replace '--filter pandoc-citeproc' -> '--citeproc' (Closes: #1017256).
+  * Drop build-dep and autopkgtest dep on pandoc-citeproc.
+
+ -- Sean Whitton <spwhitton@spwhitton.name>  Sat, 20 Aug 2022 13:25:24 -0700
+
 pandoc-citeproc-preamble (1.6-1) unstable; urgency=medium
 
   * Drop mistaken Tests: field from d/tests/control.

@@ -8,7 +8,6 @@ Build-Depends: debhelper (>= 10),
  libghc-text-conversions-dev,
  libghc-pandoc-types-dev (>= 1.20),
  pandoc <!nocheck>,
- pandoc-citeproc <!nocheck>,
 Standards-Version: 4.4.1
 Homepage: https://spwhitton.name/tech/code/pandoc-citeproc-preamble/
 Vcs-Git: https://git.spwhitton.name/pandoc-citeproc-preamble
@@ -20,15 +19,14 @@ Depends: ${shlibs:Depends},
  ${misc:Depends},
  ${haskell:Depends},
 Recommends: pandoc-citeproc
-Description: insert a preamble before pandoc-citeproc's bibliography
- pandoc-citeproc-preamble is a JSON filter for Pandoc which inserts a
- preamble before the output that the pandoc-citeproc filter appends to
- the document. This preamble might include a heading
- (e.g. "Bibliography") and raw markup to format the bibliography for
- the output format.
+Description: insert a preamble before Pandoc's bibliography
+ pandoc-citeproc-preamble is a JSON filter for Pandoc which inserts a preamble
+ before the output that Pandoc's citeproc filter appends to the document. This
+ preamble might include a heading (e.g. "Bibliography") and raw markup to
+ format the bibliography for the output format.
  .
- Since pandoc-citeproc doesn't provide any facility to add formatting
- control code to its output, pandoc-citeproc-preamble is necessary to
- avoid the user being forced to add their control code to the end of
- their input files, thereby losing the input file's agnosticity with
- regard to output format.
+ Since Pandoc's citeproc filter doesn't provide any facility to add formatting
+ control code to its output, pandoc-citeproc-preamble is necessary to avoid
+ the user being forced to add their control code to the end of their input
+ files, thereby losing the input file's agnosticity with regard to output
+ format.
