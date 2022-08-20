@@ -40,7 +40,7 @@ To override this, you can set document metadata like this:
 
 =over 4
 
-    % pandoc ... --filter pandoc-citeprocpreamble \
+    % pandoc ... --filter pandoc-citeproc-preamble \
         -M citeproc-preamble=~/mypreamble.tex ...
 
 =back

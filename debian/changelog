@@ -6,6 +6,7 @@ pandoc-citeproc-preamble (1.7-1) UNRELEASED; urgency=medium
   * Drop build-dep and autopkgtest dep on pandoc-citeproc.
 
   * Update homepage in pandoc-citeproc-preamble.cabal.
+  * Fix a manpage typo.
 
  -- Sean Whitton <spwhitton@spwhitton.name>  Sat, 20 Aug 2022 13:25:24 -0700
 
