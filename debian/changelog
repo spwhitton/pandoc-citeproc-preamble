@@ -1,3 +1,9 @@
+pandoc-citeproc-preamble (1.7-2) unstable; urgency=medium
+
+  * Rebuild against newer Pandoc.
+
+ -- Sean Whitton <spwhitton@spwhitton.name>  Thu, 21 Mar 2024 19:13:55 +0800
+
 pandoc-citeproc-preamble (1.7-1) unstable; urgency=medium
 
   * Replace references to pandoc-citeproc.
