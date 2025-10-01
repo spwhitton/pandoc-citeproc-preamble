@@ -18,7 +18,7 @@ Architecture: any
 Depends: ${shlibs:Depends},
  ${misc:Depends},
  ${haskell:Depends},
-Recommends: pandoc-citeproc
+Recommends: pandoc
 Description: insert a preamble before Pandoc's bibliography
  pandoc-citeproc-preamble is a JSON filter for Pandoc which inserts a preamble
  before the output that Pandoc's citeproc filter appends to the document. This

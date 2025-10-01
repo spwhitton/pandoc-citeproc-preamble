@@ -1,3 +1,10 @@
+pandoc-citeproc-preamble (1.7-3) UNRELEASED; urgency=medium
+
+  * Replace Recommends on pandoc-citeproc with one on pandoc
+    (Closes: #1115665).
+
+ -- Sean Whitton <spwhitton@spwhitton.name>  Wed, 01 Oct 2025 11:39:03 +0100
+
 pandoc-citeproc-preamble (1.7-2) unstable; urgency=medium
 
   * Rebuild against newer Pandoc.
