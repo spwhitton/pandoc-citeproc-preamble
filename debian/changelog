@@ -1,11 +1,11 @@
-pandoc-citeproc-preamble (1.7-3) UNRELEASED; urgency=medium
+pandoc-citeproc-preamble (1.7-3) unstable; urgency=medium
 
   * Replace Recommends on pandoc-citeproc with one on pandoc
     (Closes: #1115665).
   * Upgrade to debhelper compat level 13, drop d/compat
     (Closes: #1116834).
 
- -- Sean Whitton <spwhitton@spwhitton.name>  Wed, 01 Oct 2025 11:39:03 +0100
+ -- Sean Whitton <spwhitton@spwhitton.name>  Wed, 01 Oct 2025 11:44:08 +0100
 
 pandoc-citeproc-preamble (1.7-2) unstable; urgency=medium
 
